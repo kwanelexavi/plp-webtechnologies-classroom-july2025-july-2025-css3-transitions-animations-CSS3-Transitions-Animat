@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CSS & JavaScript Animation </h1>
+    </header>
+    
+    <div class="container">
+        <!-- Part 1: CSS Animations -->
+        <div class="card">
+            <h2>CSS Animations</h2>
+            <div class="demo-area">
+                <div class="box bounce"></div>
+                <div class="circle pulse"></div>
+            </div>
+            <div class="explanation">
+                <p>These animations are pure CSS using @keyframes. The box bounces continuously and the circle pulses.</p>
+            </div>
+        </div>
+        
+        <!-- Part 1: CSS Transitions -->
+        <div class="card">
+            <h2>CSS Transitions</h2>
+            <div class="demo-area">
+                <button class="btn">Hover Me</button>
+            </div>
+            <div class="explanation">
+                <p>Hover over the button to see a smooth transition effect.</p>
+            </div>
+        </div>
+        
+        <!-- Part 2: JavaScript Functions -->
+        <div class="card">
+            <h2>JavaScript Functions</h2>
+            <div class="demo-area">
+                <input type="number" id="number-input" placeholder="Enter a number" value="5">
+                <button class="btn" onclick="calculateSquare()">Calculate Square</button>
+                <p id="result">Result: </p>
+            </div>
+            <div class="explanation">
+                <p> JavaScript functions with parameters and return values.</p>
+            </div>
+        </div>
+        
+        <!-- NEW: Factorial Calculation Card -->
+        <div class="card">
+            <h2>Factorial Calculation</h2>
+            <div class="demo-area">
+                <input type="number" id="factorial-input" placeholder="Enter a number" min="0" value="5">
+                <button class="btn" onclick="calculateFactorial()">Calculate Factorial</button>
+                <p id="factorial-result">Result: </p>
+            </div>
+            <div class="explanation">
+                <p>Another function</p>
+            </div>
+        </div>
+        
+        <!-- Part 3: Combined Animations -->
+        <div class="card">
+            <h2>Combined Animations</h2>
+            <div class="demo-area">
+                <div class="card-element">
+                    <div class="card-inner" id="flip-card">
+                        <div class="card-front">FRONT</div>
+                        <div class="card-back">BACK</div>
+                    </div>
+                </div>
+                <button class="btn" onclick="flipCard()">Flip Card</button>
+            </div>
+            <div class="explanation">
+                <p>JavaScript adds a class to trigger the CSS transition for the card flip animation.</p>
+            </div>
+        </div>
+        
+        <!-- Part 3: Animation Control -->
+        <div class="card">
+            <h2>Animation Control</h2>
+            <div class="demo-area">
+                <div class="box" id="controlled-box"></div>
+                <div class="controls">
+                    <button class="btn" onclick="startAnimation()">Start</button>
+                    <button class="btn" onclick="stopAnimation()">Stop</button>
+                </div>
+            </div>
+            <div class="explanation">
+                <p>JavaScript controls the CSS animation by adding and removing animation classes dynamically.</p>
+            </div>
+        </div>
+        
+        <!-- Part 3: Modal Animation popup -->
+        <div class="card">
+            <h2>Modal Animation</h2>
+            <div class="demo-area">
+                <button class="btn" onclick="openModal()">Open Modal</button>
+            </div>
+            <div class="explanation">
+                <p>JavaScript triggers the modal animation by toggling CSS classes for both fade and slide effects.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="demo-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <h2>Animated Modal</h2>
+            <p>This modal demonstrates combined CSS and JavaScript animation.</p>
+            <button class="btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
